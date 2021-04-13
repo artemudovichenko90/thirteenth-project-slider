@@ -1,0 +1,83 @@
+body {
+    background-color: pink;
+
+}
+
+.slideshow-container {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto 0;
+}
+
+#img-slider {
+    height: 300px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-position: center;
+    object-fit: cover;
+    padding-bottom: 1rem;
+}
+
+audio{
+    padding-top: 1rem;
+}
+#time {
+    display: block;
+}
+#time::after {
+    content: 'ms';
+}
+.slider-container {
+    padding-bottom:2rem;
+}
+.slideshow-container{
+    padding-top: 1rem;
+}
+.toddler-buttons{
+    padding-top: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3.75rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: pink;
+    border: 1px solid #012880;
+    background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+    0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+    0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+    0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+button:active {
+    transform: translateY(3px);
+
+}
+
+
+button::before {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    background: #fff;
+    border-radius: 100%;
+
+    opacity: 0.7;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+body {
+    font-size: 16px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    background-color: #f8faff;
+}
