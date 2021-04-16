@@ -1,6 +1,8 @@
 //get images from server
 const images = [];
 images.push('img/1.jpg');
+images.push('img/1.1.jpg');
+images.push('img/1.2.jpg');
 images.push('img/2.jpg');
 images.push('img/3.jpg');
 images.push('img/4.jpg');
@@ -23,3 +25,17 @@ function setTime() {
     slider.time = time;//set time to slider
     document.getElementById('time').textContent = time;//set time to text view
 }
+
+//set listeners
+(function setListeners() {
+    const btnNext = document.getElementById('btnNext');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnStart = document.getElementById('btnStart');
+    const btnStop = document.getElementById('btnStop');
+    const toddler = document.getElementById('toddler');
+    btnNext.addEventListener('click', () => slider.next());
+    btnPrev.addEventListener('click', () => slider.prev());
+    btnStart.addEventListener('click', () => slider.start());
+    btnStop.addEventListener('click', () => slider.stop());
+    toddler.addEventListener('oninput', setTime);
+})()

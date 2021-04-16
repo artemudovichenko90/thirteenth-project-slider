@@ -5,8 +5,8 @@
 	<title>Pegasus</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="js/slider.js"></script>
-	<script src="js/main.js"></script>
+	<script defer src="js/slider.js"></script>
+	<script defer src="js/main.js"></script>
 
 </head>
 <body>
@@ -14,18 +14,21 @@
 
 <div class="slideshow-container">
 	<div class="slider-container">
-		<img id="img-slider" src="img/1.jpg" alt="">
-		<button class="bubbly-button" onclick="slider.prev()">prev</button>
-		<button class="bubbly-button" onclick="slider.next()">next</button>
-	</div>
-	<div class="toddler-container">
-		<input id="toddler" oninput="setTime()" type="range" min="1000" max="10000" step="1" value="2000">
-		<span id="time">2000</span>
-		<div class="toddler-buttons">
-			<button class="btn" onclick="slider.start()">start</button>
-			<button class="btn" onclick="slider.stop()">stop</button>
+		<div class="img-container">
+			<img id="img-slider" src="img/1.jpg" alt="">
+		</div>
+		<div class="buttons">
+				<button id="btnPrev" class="btn">prev</button>
+				<button id="btnNext" class="btn">next</button>
+			</div>
+		<div class="toddler-container">
+			<input id="toddler" type="range" min="1000" max="10000" step="1" value="2000">
+			<span id="time">2000</span>
+			<div class="buttons">
+				<button id="btnStart" class="btn">start</button>
+				<button id="btnStop" class="btn">stop</button>
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>

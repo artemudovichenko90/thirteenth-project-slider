@@ -1,5 +1,5 @@
 class Slider {
-    #currentImg;
+    #currentIndex;
     #images;
     #idSlider;
     #time;
@@ -8,7 +8,7 @@ class Slider {
 
     constructor(idSlider) {
         this.#idSlider = idSlider;
-        this.#currentImg = 0;
+        this.#currentIndex = 0;
         this.#images = [];
         this.#time = 2000;
         this.#isStarted = false;
@@ -19,21 +19,18 @@ class Slider {
     }
 
     next() {
-        if (this.#currentImg < this.#images.length - 1) {
-            this.#currentImg++;
-        } else {
-            this.#currentImg = 0;
-        }
-        document.getElementById(this.#idSlider).src = this.#images[this.#currentImg];
+        this.#currentIndex = (this.#currentIndex + 1) % images.length;
+        this.render();
     }
 
     prev() {
-        if (this.#currentImg > 0) {
-            this.#currentImg--;
-        } else {
-            this.#currentImg = this.#images.length - 1;
-        }
-        document.getElementById(this.#idSlider).src = this.#images[this.#currentImg];
+        this.#currentIndex = (this.#currentIndex - 1 + this.#images.length) % images.length;
+        this.render();
+    }
+
+    render() {
+        const currentImg = document.getElementById(this.#idSlider)
+        currentImg.src = this.#images[this.#currentIndex];
     }
 
 
